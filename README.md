@@ -1,13 +1,15 @@
 # Description
 
-Very simple script to check the cihpersuit used by a server from the ones that a client supports, using s_client.
+Very simple script to check the ciphersuit used by a server from the ones that a client supports, using s_client.
 
 # Setup
 
 - Copy the content of the following table to a file called "mapping.txt" in the same folder as the script: https://testssl.sh/openssl-iana.mapping.html
 This is used for a mapping between the OpenSSL ciphers sintax and the IANA one used in the RFCs.
 
-- The sed command has to be installed in the system.
+- The sed command need to be installed in the system.
+
+- The openssl command as well as s_client need to be installed in the system.
 
 # Howto
 
