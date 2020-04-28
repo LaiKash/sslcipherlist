@@ -14,9 +14,13 @@ WAIT=1
 ciphers=$(openssl ciphers 'ALL:eNULL' | sed -e 's/:/ /g')
 
 echo Obtaining cipher list from $(openssl version).
+echo "[OpenSSL syntax (in blue) <-> IANA syntax (in yellow)]"
+echo
 for cipher in ${ciphers[@]}
 do
-echo -n Testing $cipher...
+LINE=$(grep $cipher ./mapping.txt)
+IANA=$(echo $LINE | sed 's/ /,/g'| cut -d',' -f6)
+echo -e -n "Testing \e[96m $cipher \e[0m <-> \e[93m $IANA \e[0m ------ "
 
 #Connecting to the server with s_client.
 result=$(echo -n | openssl s_client -cipher "$cipher" -connect $HOST 2>&1)
