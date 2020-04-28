@@ -2,6 +2,15 @@
 
 Very simple script to check the cihpersuit used by a server from the ones that a client supports, using s_client.
 
+# Setup
+
+- Copy the content of the following table to a file called "mapping.txt" in the same folder as the script: https://testssl.sh/openssl-iana.mapping.html
+This is used for a mapping between the OpenSSL ciphers sintax and the IANA one used in the RFCs.
+
+- The sed command has to be installed in the system.
+
+# Howto
+
 As a probe of concept, lets think that the host is in 128.10.10.10. Create a key and a certificate in the host as follows (port 4430):
 
 ~~~
@@ -21,4 +30,4 @@ Use sslcipherlist (in the client) and check what happens:
 ~~~
 
 
-Additionally, if you want only to list the ciphers valid for the client, execute (in the client) the script sslistclient.sh.
+Additionally, if you want only to list the ciphers valid for the client in a better format, execute (in the client) the script sslistclient.sh.
