@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 if [ "$#" -ne 1 ]; then
     echo "Need host:port as the only argument. Usage: sslciphlist.sh host:port"
     exit 1
