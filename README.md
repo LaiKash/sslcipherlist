@@ -1,6 +1,6 @@
 # Description
 
-Very simple script to check the ciphersuit used by a server from the ones that a client supports, using s_client.
+Very simple script to check the chipher list used by a server from the ones that a client supports, using s_client.
 
 # Setup
 
